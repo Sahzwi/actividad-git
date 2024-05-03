@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil de Sahzw en Spotify!">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" 
+    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" 
+    rel="stylesheet" />
+    <link rel="stylesheet" href="/./css/styles-2.css" />
+    <script src="/./js/functions-2.js" defer></script>
+    <meta property="og:title" content="Sahzw en Spotify!">
+    <meta property="og:image" content="img/images/logo.webp">
+    <meta property="og:description" content="Revisa el perfil de Sahzw en spotify! Sus canciones, artistas y albumes preferidos...">
+    <meta property="og:url" content="www.spotify.com/perfiles/sahzw">
+    <title>Sahzw - Spotify</title>
+</head>
+<body>
+    <header>
+        <a href="/./index.html">
+            <img class="logo" src="/./img/images/logo.webp" alt="Logo de Spotify">
+        </a>
+        <section>
+            <form role="searchbox">
+                <input type="text" placeholder="Buscar">
+
+            </form>
+            
+            <a href="#" aria-label="Boton de Iniciar Sesion">Iniciar Sesion</a>
+        </section>
+    </header>
+
+    <main>
+        <articule>
+            <section>
+                <h1>Sahzw<span>Premium</span></h1>
+
+                <p>Hola! Soy un usuario en spotify!</p>
+                <p>Me gusta el rap</p>
+            </section>
+
+            <img src="/./img/images/PFP.jpg" alt="Foto de Perfil">
+        </articule>
+
+        
+        <article role="tab">
+            <h1>Artistas Escuchados Recientemente:</h1>
+            <section class="images" onclick="testing()">
+                <div>
+                    <img src="/./img/images/weeknd.jpg" alt="The Weeknd en Spotify" lang="en" onclick="artistGalery(this);">
+                    <p>The Weeknd</p>
+                </div>
+
+                <div>
+                    <img src="/./img/images/destroy_lonely.jpg" alt="Destroy Lonely en Spotify" lang="en" onclick="artistGalery(this);">
+                    <p>Destroy Lonely</p>
+                </div>
+
+                <div>
+                    <img src="/./img/images/ye_west.jpg" alt="Kanye West en Spotify" lang="en" onclick="artistGalery(this);">
+                    <p>Kanye West</p>
+                </div>
+
+                <div>
+                    <img src="/./img/images/future.jpg" alt="Future en Spotify" lang="en" onclick="artistGalery(this);">
+                    <p>Future</p>
+                </div>
+
+                <div>
+                    <img src="/./img/images/nine_inch_nails.jpg" alt="Nine Inch Nails en Spotify" lang="en" onclick="artistGalery(this);">
+                    <p>Nine Inch Nails</p>
+                </div>
+            </section>   
+            
+            <section class="container">
+                <span class="closebtn">&times;</span>
+                <img class="expandedImg">
+                <div class="imgtext"></div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <article>
+            <section>
+                <h2>Spotify</h2>
+                <a href="/./index.html" aria-label="Link para la pagina de Home">Home</a>
+                <a href="#" aria-label="Link para ver Spotify Premium">Premium</a>
+                <a href="#" aria-label="Link para la pagina de Feedback">Feedback</a>
+            </section>
+
+            <section>
+                <h2>Compañia</h2>
+                <a href="#" aria-label="Link para la pagina de Contactos">Contacto</a>
+                <a href="#" aria-label="Link para la pagina de" Trabajos>Trabajos</a>
+                <a href="#" aria-label="Link para la pagina de" Creditos>Creditos</a>
+            </section>
+
+            <section>
+                <h2>Legal</h2>
+                <a href="#" aria-label="Link para la pagina de Privacidad">Privacidad</a>
+                <a href="#" aria-label="Link para la pagina de" Terminos y Condiciones>Terminos y Condiciones</a>
+                <p>&#169 Spotify</p>
+            </section>
+
+            <section class="social">
+                <h2>Redes</h2>
+                <img src="/./img/icons/facebook.svg" alt="Icono de Facebook" aria-label="Link a nuestra pagina de Facebook" role="button">
+                <img src="/./img/icons/twitter.svg" alt="Icono de Twitter" aria-label="Link a nuestra pagina de Twitter" role="button">
+                <img src="/./img/icons/instagram.svg" alt="Icono de Instagram" aria-label="Link a nuestra pagina de Instagram" role="button">
+                <img src="/./img/icons/youtube.svg" alt="Icono de Youtube" aria-label="Link a nuestra pagina de Youtube" role="button">
+            </section>
+        </article>
+    </footer>
+</body>
+</html>

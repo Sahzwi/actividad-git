@@ -1,0 +1,127 @@
+body {
+    font-family: 'Ubuntu', Courier, monospace;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "intro intro intro"
+    "footer footer footer"
+    ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+    width: 100%;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+    grid-area: header;
+    @include baseContainer(45px, 0, none);
+
+    @include thirdBreakpoint {
+        gap: 40px;
+        padding: 30px;
+    }
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        @include thirdBreakpoint {
+            gap: 20px;
+        }
+    }
+    
+}
+
+main {
+    box-sizing: border-box;
+    background-color: #1c1c1c;
+    grid-area: intro;
+
+    .intro {
+        @include baseContainer(15px 50px, 25px, none);
+        display: flex;
+        justify-content: space-between;
+
+        @include secondBreakpoint {
+            padding: 15px 15px;
+        }
+
+        @include thirdBreakpoint {
+            padding: 10px 10px;
+            margin: 1px;
+        }
+
+        section:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .downloadsMain {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+            }
+        }
+    }
+    
+    .base {
+        background-color: #2b2b2b;
+        border-radius: 0.75rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5px;
+        @include baseContainer(30px, 15px, none);
+    }
+
+    .underBase {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        section:first-child {
+            background-color: #2b2b2b;
+            @include baseContainer(25px, 20px, none);
+            border-radius: 0.75rem;
+        }
+
+        section:last-child {
+            background-color: #448700;
+            @include baseContainer(25px, 20px, none);
+            border-radius: 0.75rem;
+        }
+    }
+}
+
+footer {
+    @include baseContainer(40px 55px, 0, none);
+    grid-area: footer;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+    article {
+        display: flex;
+        gap: 140px;
+
+        @include secondBreakpoint {
+            gap: 80px;
+        }
+
+        @include secondBreakpoint {
+            gap: 40px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+    }
+}

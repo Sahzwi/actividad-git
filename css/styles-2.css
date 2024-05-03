@@ -1,0 +1,263 @@
+body {
+  font-family: "Ubuntu", Courier, monospace;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header" "intro intro intro" "footer footer footer";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  width: 100%;
+  background-color: #1c1c1c;
+  box-sizing: border-box;
+  grid-area: header;
+  box-sizing: border-box;
+  padding: 45px;
+  margin: 0;
+  border: none;
+}
+@media screen and (max-width: 42rem) {
+  header {
+    gap: 40px;
+    padding: 30px;
+  }
+}
+header section {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+@media screen and (max-width: 42rem) {
+  header section {
+    gap: 20px;
+  }
+}
+
+main {
+  background-color: #1c1c1c;
+  grid-area: intro;
+}
+main articule:first-child {
+  box-sizing: border-box;
+  padding: 30px;
+  margin: 45px 0;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media screen and (max-width: 42rem) {
+  main articule:first-child {
+    gap: 20px;
+  }
+}
+main articule:first-child section {
+  box-sizing: border-box;
+  padding: 70px 0;
+  margin: 0;
+  border: none;
+  background-color: #2a2a2a;
+  border-radius: 0.45rem;
+}
+main article:last-child {
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0;
+  border: none;
+}
+main article:last-child section {
+  background-color: #113404;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+footer {
+  box-sizing: border-box;
+  padding: 40px 55px;
+  margin: 0;
+  border: none;
+  grid-area: footer;
+  background-color: #1c1c1c;
+  box-sizing: border-box;
+}
+footer article {
+  display: flex;
+  gap: 140px;
+}
+@media screen and (max-width: 49rem) {
+  footer article {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 49rem) {
+  footer article {
+    gap: 40px;
+  }
+}
+footer article section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+header .logo {
+  width: 140px;
+  bottom: 30px;
+  position: relative;
+}
+header section a {
+  background-color: #053f02;
+  color: #0a7d04;
+  padding: 10px;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+header section form {
+  margin-top: 7px;
+}
+header section form input[type=text], header section form textarea {
+  background-color: #000000;
+  border: #000000;
+  height: 25px;
+  border-radius: 0.75rem;
+  color: #fff;
+}
+
+main articule:first-child section h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  padding: 0 10px;
+}
+@media screen and (max-width: 57rem) {
+  main articule:first-child section h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main articule:first-child section h1 {
+    font-size: 2rem;
+  }
+}
+main articule:first-child section p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #fff;
+  word-spacing: 4px;
+  text-align: center;
+  padding: 0 20px;
+}
+@media screen and (max-width: 57rem) {
+  main articule:first-child section p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main articule:first-child section p {
+    font-size: 0.9rem;
+  }
+}
+main articule:first-child img {
+  width: 330px;
+  border-radius: 10rem;
+  position: relative;
+}
+@media screen and (max-width: 57rem) {
+  main articule:first-child img {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main articule:first-child img {
+    width: 150px;
+    height: 150px;
+    top: 33px;
+  }
+}
+main article:last-child h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+}
+main article:last-child .images div img {
+  width: 150px;
+  cursor: pointer;
+}
+@media screen and (max-width: 57rem) {
+  main article:last-child .images div img {
+    width: 130px;
+  }
+}
+@media screen and (max-width: 49rem) {
+  main article:last-child .images div img {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main article:last-child .images div img {
+    width: 80px;
+  }
+}
+main article:last-child .images div p {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
+}
+main article:last-child .container {
+  position: relative;
+  display: none;
+}
+main article:last-child .container .expandedImg {
+  width: 100%;
+}
+main article:last-child .container .imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+main article:last-child .container .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+footer section h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #323232;
+  text-align: center;
+}
+@media screen and (max-width: 57rem) {
+  footer section h2 {
+    font-size: 1rem;
+  }
+}
+footer section a, footer section p {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+@media screen and (max-width: 57rem) {
+  footer section a, footer section p {
+    font-size: 0.8rem;
+  }
+}
+footer .social img {
+  width: 40px;
+  cursor: pointer;
+}/*# sourceMappingURL=styles-2.css.map */

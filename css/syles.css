@@ -1,0 +1,423 @@
+body {
+  font-family: "Ubuntu", Courier, monospace;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header" "intro intro intro" "footer footer footer";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  width: 100%;
+  background-color: #1c1c1c;
+  box-sizing: border-box;
+  grid-area: header;
+  box-sizing: border-box;
+  padding: 45px;
+  margin: 0;
+  border: none;
+}
+@media screen and (max-width: 42rem) {
+  header {
+    gap: 40px;
+    padding: 30px;
+  }
+}
+header section {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media screen and (max-width: 42rem) {
+  header section {
+    gap: 20px;
+  }
+}
+
+main {
+  box-sizing: border-box;
+  background-color: #1c1c1c;
+  grid-area: intro;
+}
+main .intro {
+  box-sizing: border-box;
+  padding: 15px 50px;
+  margin: 25px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 49rem) {
+  main .intro {
+    padding: 15px 15px;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .intro {
+    padding: 10px 10px;
+    margin: 1px;
+  }
+}
+main .intro section:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .intro section:first-child .downloadsMain {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+main .base {
+  background-color: #2b2b2b;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+  padding: 30px;
+  margin: 15px;
+  border: none;
+}
+main .underBase {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .underBase section:first-child {
+  background-color: #2b2b2b;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 20px;
+  border: none;
+  border-radius: 0.75rem;
+}
+main .underBase section:last-child {
+  background-color: #448700;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 20px;
+  border: none;
+  border-radius: 0.75rem;
+}
+
+footer {
+  box-sizing: border-box;
+  padding: 40px 55px;
+  margin: 0;
+  border: none;
+  grid-area: footer;
+  background-color: #1c1c1c;
+  box-sizing: border-box;
+}
+footer article {
+  display: flex;
+  gap: 140px;
+}
+@media screen and (max-width: 49rem) {
+  footer article {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 49rem) {
+  footer article {
+    gap: 40px;
+  }
+}
+footer article section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+header .logo {
+  width: 140px;
+  bottom: 30px;
+  position: relative;
+}
+header section a {
+  background-color: #053f02;
+  color: #0a7d04;
+  padding: 10px;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+header section form {
+  margin-top: 7px;
+}
+header section form input[type=text], header section form textarea {
+  background-color: #000000;
+  border: #000000;
+  height: 25px;
+  border-radius: 0.75rem;
+  color: #fff;
+}
+
+main .intro section:first-child h1, main .intro section:first-child h2, main .intro section:first-child h3 {
+  font-weight: 600;
+  font-size: 3rem;
+  color: #fff;
+}
+@media screen and (max-width: 57rem) {
+  main .intro section:first-child h1, main .intro section:first-child h2, main .intro section:first-child h3 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .intro section:first-child h1, main .intro section:first-child h2, main .intro section:first-child h3 {
+    font-size: 1.9rem;
+  }
+}
+main .intro section:first-child p {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: rgb(163, 163, 163);
+}
+@media screen and (max-width: 57rem) {
+  main .intro section:first-child p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .intro section:first-child p {
+    font-size: 0.8rem;
+  }
+}
+main .intro section:first-child .sh1 {
+  color: rgba(7, 223, 0, 0.5725490196);
+}
+main .intro section:first-child a {
+  text-decoration: none;
+  color: #0a7d04;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 42rem) {
+  main .intro section:first-child a {
+    font-size: 0.7rem;
+  }
+}
+main .intro section:first-child .downloadsMain img {
+  width: 200px;
+  position: relative;
+  cursor: pointer;
+}
+main .intro section:first-child .downloadsMain img:first-child {
+  width: 220px;
+}
+@media screen and (max-width: 49rem) {
+  main .intro section:first-child .downloadsMain img:first-child {
+    width: 195px;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .intro section:first-child .downloadsMain img:first-child {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 49rem) {
+  main .intro section:first-child .downloadsMain img {
+    width: 175px;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .intro section:first-child .downloadsMain img {
+    width: 140px;
+  }
+}
+main .intro img {
+  width: 300px;
+}
+@media screen and (max-width: 49rem) {
+  main .intro img {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .intro img {
+    width: 200px;
+  }
+}
+main .base img {
+  width: 500px;
+  position: relative;
+}
+@media screen and (max-width: 49rem) {
+  main .base img {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .base img {
+    width: 300px;
+  }
+}
+main .base section h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0 -5px;
+  border: none;
+  text-align: center;
+}
+@media screen and (max-width: 57rem) {
+  main .base section h1 {
+    font-size: 2.5rem;
+  }
+}
+main .base section p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: rgb(163, 163, 163);
+  word-spacing: 4px;
+  text-align: justify;
+  padding: 20px;
+}
+@media screen and (max-width: 57rem) {
+  main .base section p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .base section p {
+    word-spacing: 2px;
+  }
+}
+main .underBase section:first-child {
+  background-image: url("../../img/images/spotify_background.png");
+  background-size: 25%;
+}
+main .underBase section:first-child h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0 -5px;
+  border: none;
+}
+@media screen and (max-width: 57rem) {
+  main .underBase section:first-child h1 {
+    font-size: 2.5rem;
+  }
+}
+main .underBase section:first-child p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  word-spacing: 4px;
+  text-align: justify;
+  padding: 20px 450px 20px 20px;
+}
+@media screen and (max-width: 57rem) {
+  main .underBase section:first-child p {
+    font-size: 1rem;
+    padding: 20px 300px 20px 20px;
+  }
+}
+@media screen and (max-width: 49rem) {
+  main .underBase section:first-child p {
+    padding: 20px 200px 20px 20px;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .underBase section:first-child p {
+    padding: 20px 120px 20px 20px;
+  }
+}
+main .underBase section:first-child a {
+  text-decoration: none;
+  color: #0ac900;
+}
+main .underBase section:last-child h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  color: #000000;
+  text-align: center;
+}
+@media screen and (max-width: 57rem) {
+  main .underBase section:last-child h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .underBase section:last-child h1 {
+    font-size: 2rem;
+  }
+}
+main .underBase section:last-child p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  word-spacing: 4px;
+  text-align: center;
+  padding: 20px;
+}
+@media screen and (max-width: 57rem) {
+  main .underBase section:last-child p {
+    font-size: 0.9rem;
+  }
+}
+main .underBase section:last-child div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+main .underBase section:last-child div img {
+  width: 200px;
+  position: relative;
+  cursor: pointer;
+}
+main .underBase section:last-child div img:first-child {
+  width: 220px;
+}
+@media screen and (max-width: 49rem) {
+  main .underBase section:last-child div img:first-child {
+    width: 195px;
+  }
+}
+@media screen and (max-width: 42rem) {
+  main .underBase section:last-child div img:first-child {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 49rem) {
+  main .underBase section:last-child div img {
+    width: 140px;
+  }
+}
+
+footer section h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #323232;
+  text-align: center;
+}
+@media screen and (max-width: 57rem) {
+  footer section h2 {
+    font-size: 1rem;
+  }
+}
+footer section a, footer section p {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+@media screen and (max-width: 57rem) {
+  footer section a, footer section p {
+    font-size: 0.8rem;
+  }
+}
+footer .social img {
+  width: 40px;
+  cursor: pointer;
+}/*# sourceMappingURL=syles.css.map */

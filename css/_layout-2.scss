@@ -1,0 +1,98 @@
+body {
+    font-family: 'Ubuntu', Courier, monospace;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "intro intro intro"
+    "footer footer footer"
+    ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+    width: 100%;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+    grid-area: header;
+    @include baseContainer(45px, 0, none);
+
+    @include thirdBreakpoint {
+        gap: 40px;
+        padding: 30px;
+    }
+
+    section {
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+
+        @include thirdBreakpoint {
+            gap: 20px;
+        }
+    }
+    
+}
+
+main {
+    background-color: #1c1c1c;
+    grid-area: intro;
+
+    articule:first-child {
+        @include baseContainer(30px, 45px 0, none);
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @include thirdBreakpoint {
+            gap: 20px;
+        }
+
+        section {
+            @include baseContainer(70px 0, 0, none);
+            background-color: #2a2a2a;
+            border-radius: 0.45rem;
+        }
+    }
+
+    article:last-child {
+        @include baseContainer(20px, 0, none);
+       
+        section {
+            background-color: #113404;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+    }
+}
+
+
+footer {
+    @include baseContainer(40px 55px, 0, none);
+    grid-area: footer;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+    article {
+        display: flex;
+        gap: 140px;
+
+        @include secondBreakpoint {
+            gap: 80px;
+        }
+
+        @include secondBreakpoint {
+            gap: 40px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+    }
+}
