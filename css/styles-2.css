@@ -27,10 +27,32 @@ header {
 }
 
 main {
+  box-sizing: border-box;
   background-color: #1c1c1c;
   grid-area: intro;
 }
-main articule:first-child {
+main .menu {
+  width: 30%;
+  position: fixed;
+  left: -50%;
+  top: 0px;
+  background-color: #3b3737;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 19px -1px 22px -15px #000;
+  transition: all 0.25s ease;
+  z-index: 3;
+}
+main .menu nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+main .menu.show {
+  left: 0;
+}
+main .userInterface {
   box-sizing: border-box;
   padding: 30px;
   margin: 45px 0;
@@ -40,11 +62,12 @@ main articule:first-child {
   gap: 40px;
 }
 @media screen and (max-width: 42rem) {
-  main articule:first-child {
-    gap: 20px;
+  main .userInterface {
+    padding: 15px;
+    gap: 15px;
   }
 }
-main articule:first-child section {
+main .userInterface section {
   box-sizing: border-box;
   padding: 70px 0;
   margin: 0;
@@ -74,6 +97,11 @@ footer {
   background-color: #1c1c1c;
   box-sizing: border-box;
 }
+@media screen and (max-width: 42rem) {
+  footer {
+    padding: 15px;
+  }
+}
 footer article {
   display: flex;
   gap: 140px;
@@ -88,6 +116,11 @@ footer article {
     gap: 40px;
   }
 }
+@media screen and (max-width: 42rem) {
+  footer article {
+    gap: 20px;
+  }
+}
 footer article section {
   display: flex;
   flex-direction: column;
@@ -99,8 +132,23 @@ header .logo {
   bottom: 10px;
   position: relative;
 }
+header .menuIcon {
+  cursor: pointer;
+}
 
-main articule:first-child section h1 {
+main .menu nav a {
+  padding-bottom: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+@media screen and (max-width: 42rem) {
+  main .menu nav a {
+    font-size: 0.8rem;
+  }
+}
+main .userInterface section h1 {
   font-weight: 600;
   font-size: 3rem;
   color: #fff;
@@ -108,16 +156,16 @@ main articule:first-child section h1 {
   padding: 0 10px;
 }
 @media screen and (max-width: 57rem) {
-  main articule:first-child section h1 {
+  main .userInterface section h1 {
     font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 42rem) {
-  main articule:first-child section h1 {
-    font-size: 2rem;
+  main .userInterface section h1 {
+    font-size: 1.5rem;
   }
 }
-main articule:first-child section p {
+main .userInterface section p {
   font-weight: 500;
   font-size: 1.5rem;
   color: #fff;
@@ -126,27 +174,27 @@ main articule:first-child section p {
   padding: 0 20px;
 }
 @media screen and (max-width: 57rem) {
-  main articule:first-child section p {
+  main .userInterface section p {
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 42rem) {
-  main articule:first-child section p {
+  main .userInterface section p {
     font-size: 0.9rem;
   }
 }
-main articule:first-child img {
+main .userInterface img {
   width: 330px;
   border-radius: 10rem;
   position: relative;
 }
 @media screen and (max-width: 57rem) {
-  main articule:first-child img {
+  main .userInterface img {
     width: 280px;
   }
 }
 @media screen and (max-width: 42rem) {
-  main articule:first-child img {
+  main .userInterface img {
     width: 150px;
     height: 150px;
     top: 33px;
@@ -168,12 +216,12 @@ main article:last-child .images div img {
 }
 @media screen and (max-width: 49rem) {
   main article:last-child .images div img {
-    width: 100px;
+    width: 80px;
   }
 }
 @media screen and (max-width: 42rem) {
   main article:last-child .images div img {
-    width: 80px;
+    width: 50px;
   }
 }
 main article:last-child .images div p {

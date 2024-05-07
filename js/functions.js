@@ -1,5 +1,13 @@
 console.log("hola mundo!")
 
+//UI Menu
+const menuIcon = document.querySelector(".menuIcon");
+const menu = document.querySelector(".menu")
+
+menuIcon.addEventListener("click", () => {
+    menu.classList.toggle("show");
+})
+
 // Movimiento de las Imagenes
 const mainBase = document.querySelector(".base");
 

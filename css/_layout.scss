@@ -24,7 +24,6 @@ header {
         gap: 40px;
         padding: 30px;
     }
-    
 }
 
 main {
@@ -32,17 +31,41 @@ main {
     background-color: #1c1c1c;
     grid-area: intro;
 
+    .menu {
+        width: 30%;
+        position: fixed;
+        left: -50%;
+        top: 0px;
+        background-color: #3b3737;
+        padding: 20px;
+        height: 100%;
+        box-shadow: 19px -1px 22px -15px #000;
+        transition: all 0.25s ease;
+        z-index: 3;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .menu.show {
+        left: 0;
+    }
+
     .intro {
         @include baseContainer(15px 50px, 25px, none);
         display: flex;
         justify-content: space-between;
 
         @include secondBreakpoint {
-            padding: 15px 15px;
+            padding: 15px;
         }
 
         @include thirdBreakpoint {
-            padding: 10px 10px;
+            padding: 5px;
             margin: 1px;
         }
 
@@ -105,6 +128,10 @@ footer {
 
         @include secondBreakpoint {
             gap: 40px;
+        }
+
+        @include thirdBreakpoint {
+            gap: 20px;
         }
 
         section {

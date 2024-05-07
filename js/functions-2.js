@@ -1,3 +1,11 @@
+//UI Menu
+const menuIcon = document.querySelector(".menuIcon");
+const menu = document.querySelector(".menu")
+
+menuIcon.addEventListener("click", () => {
+    menu.classList.toggle("show");
+})
+
 // Funcion para expander Imagenes de Artistas
 
 const artistGalery = (imgs) => {

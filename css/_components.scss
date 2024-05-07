@@ -4,9 +4,27 @@ header {
         bottom: 10px;
         position: relative;
     }
+
+    .menuIcon {
+        cursor: pointer;
+    }
 }
 
 main {
+    .menu {
+        nav a {
+            padding-bottom: 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+
+            @include thirdBreakpoint {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
     .intro {
         section:first-child {
             h1, h2, h3 {
@@ -17,7 +35,7 @@ main {
                 }
 
                 @include thirdBreakpoint {
-                    font-size: 1.9rem;
+                    font-size: 1.5rem;
                 }
             }
 
@@ -29,7 +47,7 @@ main {
                 }
 
                 @include thirdBreakpoint {
-                    font-size: 0.8rem;
+                    font-size: 0.5rem;
                 }
             }
 
@@ -51,7 +69,7 @@ main {
                         }
 
                         @include thirdBreakpoint {
-                            width: 150px;
+                            width: 100px;
                         }
                     }
 
@@ -60,7 +78,7 @@ main {
                     }
 
                     @include thirdBreakpoint {
-                        width: 140px;
+                        width: 90px;
                     }
                 }
             }   
