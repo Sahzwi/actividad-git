@@ -1,32 +1,8 @@
 header {
     .logo {
         width: 140px;
-        bottom: 30px;
+        bottom: 10px;
         position: relative;
-    }
-
-    section {
-        a {
-            background-color: #053f02;
-            color: #0a7d04;
-            padding: 10px;
-            border-radius: 0.75rem;
-            text-decoration: none;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        form {
-            margin-top: 7px;
-
-            input[type="text"], textarea {
-                background-color: #000000;
-                border: #000000;
-                height: 25px;
-                border-radius: 0.75rem;
-                color: #fff;
-            }
-        }
     }
 }
 
@@ -59,16 +35,6 @@ main {
 
             .sh1 {
                 color: #07df0092;
-            }
-
-            a {
-                text-decoration: none;
-                color: #0a7d04;
-                font-size: 0.9rem;
-
-                @include thirdBreakpoint {
-                    font-size: 0.7rem;
-                }
             }
             
             .downloadsMain {

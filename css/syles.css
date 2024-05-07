@@ -25,16 +25,6 @@ header {
     padding: 30px;
   }
 }
-header section {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-}
-@media screen and (max-width: 42rem) {
-  header section {
-    gap: 20px;
-  }
-}
 
 main {
   box-sizing: border-box;
@@ -136,27 +126,8 @@ footer article section {
 
 header .logo {
   width: 140px;
-  bottom: 30px;
+  bottom: 10px;
   position: relative;
-}
-header section a {
-  background-color: #053f02;
-  color: #0a7d04;
-  padding: 10px;
-  border-radius: 0.75rem;
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
-}
-header section form {
-  margin-top: 7px;
-}
-header section form input[type=text], header section form textarea {
-  background-color: #000000;
-  border: #000000;
-  height: 25px;
-  border-radius: 0.75rem;
-  color: #fff;
 }
 
 main .intro section:first-child h1, main .intro section:first-child h2, main .intro section:first-child h3 {
@@ -191,16 +162,6 @@ main .intro section:first-child p {
 }
 main .intro section:first-child .sh1 {
   color: rgba(7, 223, 0, 0.5725490196);
-}
-main .intro section:first-child a {
-  text-decoration: none;
-  color: #0a7d04;
-  font-size: 0.9rem;
-}
-@media screen and (max-width: 42rem) {
-  main .intro section:first-child a {
-    font-size: 0.7rem;
-  }
 }
 main .intro section:first-child .downloadsMain img {
   width: 200px;
