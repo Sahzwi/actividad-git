@@ -31,6 +31,27 @@ main {
   background-color: #1c1c1c;
   grid-area: intro;
 }
+main .menu {
+  width: 30%;
+  position: fixed;
+  left: -50%;
+  top: 0px;
+  background-color: #3b3737;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 19px -1px 22px -15px #000;
+  transition: all 0.25s ease;
+  z-index: 3;
+}
+main .menu nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+main .menu.show {
+  left: 0;
+}
 main .intro {
   box-sizing: border-box;
   padding: 15px 50px;
@@ -41,12 +62,12 @@ main .intro {
 }
 @media screen and (max-width: 49rem) {
   main .intro {
-    padding: 15px 15px;
+    padding: 15px;
   }
 }
 @media screen and (max-width: 42rem) {
   main .intro {
-    padding: 10px 10px;
+    padding: 5px;
     margin: 1px;
   }
 }
@@ -118,6 +139,11 @@ footer article {
     gap: 40px;
   }
 }
+@media screen and (max-width: 42rem) {
+  footer article {
+    gap: 20px;
+  }
+}
 footer article section {
   display: flex;
   flex-direction: column;
@@ -129,7 +155,22 @@ header .logo {
   bottom: 10px;
   position: relative;
 }
+header .menuIcon {
+  cursor: pointer;
+}
 
+main .menu nav a {
+  padding-bottom: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+@media screen and (max-width: 42rem) {
+  main .menu nav a {
+    font-size: 0.8rem;
+  }
+}
 main .intro section:first-child h1, main .intro section:first-child h2, main .intro section:first-child h3 {
   font-weight: 600;
   font-size: 3rem;
@@ -142,7 +183,7 @@ main .intro section:first-child h1, main .intro section:first-child h2, main .in
 }
 @media screen and (max-width: 42rem) {
   main .intro section:first-child h1, main .intro section:first-child h2, main .intro section:first-child h3 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
 }
 main .intro section:first-child p {
@@ -157,7 +198,7 @@ main .intro section:first-child p {
 }
 @media screen and (max-width: 42rem) {
   main .intro section:first-child p {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 }
 main .intro section:first-child .sh1 {
@@ -178,7 +219,7 @@ main .intro section:first-child .downloadsMain img:first-child {
 }
 @media screen and (max-width: 42rem) {
   main .intro section:first-child .downloadsMain img:first-child {
-    width: 150px;
+    width: 100px;
   }
 }
 @media screen and (max-width: 49rem) {
@@ -188,7 +229,7 @@ main .intro section:first-child .downloadsMain img:first-child {
 }
 @media screen and (max-width: 42rem) {
   main .intro section:first-child .downloadsMain img {
-    width: 140px;
+    width: 90px;
   }
 }
 main .intro img {

@@ -28,17 +28,43 @@ header {
 }
 
 main {
+    box-sizing: border-box;
     background-color: #1c1c1c;
     grid-area: intro;
 
-    articule:first-child {
+    .menu {
+        width: 30%;
+        position: fixed;
+        left: -50%;
+        top: 0px;
+        background-color: #3b3737;
+        padding: 20px;
+        height: 100%;
+        box-shadow: 19px -1px 22px -15px #000;
+        transition: all 0.25s ease;
+        z-index: 3;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .menu.show {
+        left: 0;
+    }
+
+    .userInterface {
         @include baseContainer(30px, 45px 0, none);
         display: flex;
         justify-content: space-between;
         gap: 40px;
 
         @include thirdBreakpoint {
-            gap: 20px;
+            padding: 15px;
+            gap: 15px;
         }
 
         section {
@@ -66,6 +92,11 @@ footer {
     grid-area: footer;
     background-color: #1c1c1c;
     box-sizing: border-box;
+
+    @include thirdBreakpoint {
+        padding: 15px;
+    }
+
     article {
         display: flex;
         gap: 140px;
@@ -76,6 +107,10 @@ footer {
 
         @include secondBreakpoint {
             gap: 40px;
+        }
+
+        @include thirdBreakpoint {
+            gap: 20px;
         }
 
         section {

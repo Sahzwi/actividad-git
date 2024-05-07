@@ -4,10 +4,28 @@ header {
         bottom: 10px;
         position: relative;
     }
+
+    .menuIcon {
+        cursor: pointer;
+    }    
 }
 
 main {
-    articule:first-child {
+    .menu {
+        nav a {
+            padding-bottom: 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+
+            @include thirdBreakpoint {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .userInterface {
         section {
 
             h1 {
@@ -20,7 +38,7 @@ main {
                 }
 
                 @include thirdBreakpoint {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
             }
 
@@ -73,11 +91,11 @@ main {
                     }
 
                     @include secondBreakpoint {
-                        width: 100px
+                        width: 80px
                     }
 
                     @include thirdBreakpoint {
-                        width: 80px
+                        width: 50px
                     }
                 }
                 p {
